@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /** {@inheritDoc} */
 @Service
@@ -28,7 +29,7 @@ public class ClientService implements IClientService {
     /** {@inheritDoc} */
     @Override
     public List<ClientDto> getAll() {
-        return this.clientRepository.findAll().stream().map(this::convertEntityToDto).toList();
+        return this.clientRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     /** {@inheritDoc} */

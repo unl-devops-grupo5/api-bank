@@ -17,6 +17,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /** {@inheritDoc} */
 @Service
@@ -35,7 +36,7 @@ public class MovementService implements IMovementService {
     /** {@inheritDoc} */
     @Override
     public List<MovementDto> getAll() {
-        return this.movementRepository.findAll().stream().map(this::convertEntityToDto).toList();
+        return this.movementRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     /** {@inheritDoc} */
@@ -43,7 +44,7 @@ public class MovementService implements IMovementService {
     public List<MovementDto> getByAccount(long idAccount) {
         Account account = new Account();
         account.setId(idAccount);
-        return this.movementRepository.findByAccount(account).stream().map(this::convertEntityToDto).toList();
+        return this.movementRepository.findByAccount(account).stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     /** {@inheritDoc} */
