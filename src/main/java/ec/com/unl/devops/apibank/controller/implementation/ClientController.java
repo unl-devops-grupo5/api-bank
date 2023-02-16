@@ -3,7 +3,7 @@ package ec.com.unl.devops.apibank.controller.implementation;
 import ec.com.unl.devops.apibank.controller.declaration.IClientController;
 import ec.com.unl.devops.apibank.domain.dto.ClientDto;
 import ec.com.unl.devops.apibank.service.declaration.IClientService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
