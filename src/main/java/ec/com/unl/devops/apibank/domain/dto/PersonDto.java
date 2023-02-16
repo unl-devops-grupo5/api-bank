@@ -5,8 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
 
-
-
 @Data
 @SuperBuilder
 public class PersonDto {

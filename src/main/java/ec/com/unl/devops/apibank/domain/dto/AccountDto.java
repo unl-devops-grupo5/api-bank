@@ -1,6 +1,6 @@
 package ec.com.unl.devops.apibank.domain.dto;
 
-import com.pfar.apibank.domain.Account;
+import ec.com.unl.devops.apibank.domain.model.Account;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotEmpty;
