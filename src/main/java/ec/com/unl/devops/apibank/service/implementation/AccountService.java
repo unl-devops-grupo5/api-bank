@@ -17,6 +17,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /** {@inheritDoc} */
 @Service
@@ -43,7 +44,7 @@ public class AccountService implements IAccountService {
     /** {@inheritDoc} */
     @Override
     public List<AccountDto> getAll() {
-        return this.accountRepository.findAll().stream().map(this::convertEntityToDto).toList();
+        return this.accountRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     /** {@inheritDoc} */
@@ -51,7 +52,7 @@ public class AccountService implements IAccountService {
     public List<AccountDto> getByClient(long idClient) {
         Client client = new Client();
         client.setId(idClient);
-        return this.accountRepository.findByClient(client).stream().map(this::convertEntityToDto).toList();
+        return this.accountRepository.findByClient(client).stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     /** {@inheritDoc} */
