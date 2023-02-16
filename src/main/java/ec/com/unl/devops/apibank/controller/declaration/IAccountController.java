@@ -1,7 +1,7 @@
 package ec.com.unl.devops.apibank.controller.declaration;
 
 import ec.com.unl.devops.apibank.domain.dto.AccountDto;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

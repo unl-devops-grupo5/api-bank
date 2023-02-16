@@ -1,10 +1,10 @@
 package ec.com.unl.devops.apibank.domain.dto;
 
 import ec.com.unl.devops.apibank.domain.model.Account;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.math.BigDecimal;
